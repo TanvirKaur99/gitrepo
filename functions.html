@@ -1,0 +1,95 @@
+<script>
+    //replace map and filter function
+// const arr=[1,2,3,4,5,6]
+
+// function double(x){
+// return x*2
+// }
+
+// function binary(y){
+//     return y.toString(2)
+// }
+
+// const output=arr.map(double);
+// const op=arr.filter(double);
+// console.log(output);
+// console.log(op);
+
+
+// const out=arr.map(binary);
+// console.log(out);
+
+//2
+// const arr1=[3,5,7,1,2]
+
+// function isOdd(x){ 
+//  return x%2
+// }
+ 
+// const val=arr1.filter(isOdd);
+// const val1=arr1.map(isOdd);
+// console.log(val);
+// console.log(val1);
+
+//3
+// const sum=[1,2,3,4,5]
+// const result=sum.reduce(function(acc,curr){
+// acc=acc+curr;
+// return acc;
+// },10)
+// console.log(`The sum is ${result}`);
+
+//4
+// const ar=[1,4,3,6,8,9];
+// const res=ar.reduce(function(max,curr){
+//   if(curr>max){
+//      max=curr; 
+//   }
+//   return max;
+// },0)
+// console.log(`the max number is: ${res}`);
+
+//5
+// const users=[
+// {firstname:"sonu",lastname:"nigam",age:24},
+// {firstname:"Raj",lastname:"Kumar",age:27},
+// {firstname:"Gitanjali",lastname:"Rajput",age:23},
+// {firstname:"Diksha",lastname:"Sharma",age:23},
+// ]
+// const output=users.map((x)=>x.firstname+" "+x.lastname);
+// console.log(output)
+
+// const op2=users.reduce(function(acc,curr){
+// if(acc[curr.age]){
+
+//     acc[curr.age]=++acc[curr.age]
+// }
+// else{
+//     acc[curr.age]=1;
+// }s
+// return acc;
+// },{})
+// console.log(op2);
+
+//filter
+// const filt=users.filter((x)=>x.age>23).map((x)=>x.firstname);
+// console.log(filt);
+
+// const numbers = [4, 9, 16, 25];
+// const newArr = numbers.map(Math.sqrt)
+// console.log(newArr);
+
+const users=[
+{firstname:"sonu",lastname:"nigam",age:24},
+{firstname:"Raj",lastname:"Kumar",age:27},
+{firstname:"Gitanjali",lastname:"Rajput",age:23},
+{firstname:"Diksha",lastname:"Sharma",age:23},
+]
+const red=users.reduce(function(acc,curr){
+if(curr.age>23){
+acc.push(curr.firstname);
+}
+return acc
+},[]);
+console.log(`The persons whose age is greater than 23 are : ${red}`)
+</script>
